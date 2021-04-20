@@ -18,6 +18,15 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 class CalculatorTests {
+	// FV = PV * i * n
+
+	@Test
+	@DisplayName("FV = PV * i * n")
+	void calculateGrossIncome() {
+		Calculator calculator = new Calculator();
+		
+		assertEquals(13.15, calculator.grossIncome(500, 8, 120), "500 reais * 8% a.a * 120 dias should equal 13,15");
+	}
 
 	@Test
 	@DisplayName("1 + 1 = 2")
