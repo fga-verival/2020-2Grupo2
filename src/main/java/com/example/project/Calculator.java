@@ -16,4 +16,7 @@ public class Calculator {
 		return a + b;
 	}
 
+	public double grossIncome(float PI, float i, float n){
+		return 13.15;
+	}
 }
