@@ -17,7 +17,7 @@ public class Calculator {
 	}
 
 	public double rendimentoLiquido(double ci, double ir, double rb){
-		return 19.9110;
+		return ((ci+rb-ir)/ci)*100 - 100;
 	}
 
 }
