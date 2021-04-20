@@ -16,7 +16,10 @@ public class Calculator {
 		return a + b;
 	}
 
-	public double grossIncome(float PI, float i, float n){
-		return 13.15;
+	public double grossIncome(float PV, float i, float n) {
+		double taxaAm = (i / 100.0) / 12.0;
+		double prazoMes = n / 30.0;
+		
+		return PV * taxaAm * prazoMes;
 	}
 }
