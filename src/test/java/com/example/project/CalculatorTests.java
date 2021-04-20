@@ -41,6 +41,19 @@ class CalculatorTests {
 		assertEquals(75.51, calculator.incomeTax(2500.0f, 9.0f, 700.0f, 17.5f), 0.1f, "2500 reais * 9% a.a * 700 dias should equal 75.51");
 	}
 
+	@ParameterizedTest(name = "{1} * {1} * {1} = {1}")
+	@CsvSource({
+			"1000,    8.5,   60, 14.16",
+			"3000,    9.0,   240, 180.0",
+			"2000,  8.5, 270, 127.50",
+			"4200,  9.5, 900, 997.5"
+	})
+	void calculateGrossIncome(double PV, double i, double n, double expectedResult) {
+		Calculator calculator = new Calculator();
+		assertEquals(expectedResult, calculator.grossIncome(PV, i, n), 0.01,
+				() -> PV + " * " + i + " * " + n + " shoud be equal to " + expectedResult);
+	}
+
 	@ParameterizedTest(name = "Aplicacao Inicial: R$ {0}\nTaxa de juros: R$ {1}\nDias: {2}\nAliquota: {3}\nImpost de Renda: {4}\n")
 	@CsvSource({
 			"1000.00f,    8.5f,     60.0f,     	 	22.5, 	3.14",

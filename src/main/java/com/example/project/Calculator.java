@@ -16,11 +16,13 @@ public class Calculator {
 		return a + b;
 	}
 
-	public double grossIncome(float PV, float i, float n) {
+	public double grossIncome(double PV, double i, double n) {
 		double taxaAm = (i / 100.0) / 12.0;
 		double prazoMes = n / 30.0;
-		
-		return PV * taxaAm * prazoMes;
+		double value = PV * taxaAm * prazoMes;
+
+		System.out.println("Calculated: " + value);
+		return value;
 	}
 
 	public double incomeTax(float P, float i, float n, float ir){
@@ -33,3 +35,4 @@ public class Calculator {
 	}
 
 }
+
