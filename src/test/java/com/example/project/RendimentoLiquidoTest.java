@@ -16,7 +16,7 @@ class RendimentoLiquidoTest {
         double rendimentoBruto = 983.84;
         assertEquals(19.9110, 
         calculadora.rendimentoLiquido(capitalInicial, imposto, rendimentoBruto),
-        0.00001);
+        0.001);
     }
 
     @Test
@@ -28,6 +28,6 @@ class RendimentoLiquidoTest {
         double rendimentoBruto = 13.97;
         assertEquals(1.0829, 
         calculadora.rendimentoLiquido(capitalInicial, imposto, rendimentoBruto),
-        0.00001);
+        0.001);
     }
 }
