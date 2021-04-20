@@ -27,6 +27,11 @@ class CalculatorTests {
 		
 		assertEquals(13.15, calculator.grossIncome(500, 8, 120), "500 reais * 8% a.a * 120 dias should equal 13,15");
 		assertEquals(431.51, calculator.grossIncome(2500, 9, 700), "2500 reais * 9% a.a * 700 dias should equal 431.51");
+	@Test
+	@DisplayName("(PV * i * n * 22.5)/100")
+	void testCalculationIncomeTax(){
+		Calculator calculator = new Calculator();
+		assertEquals(2.96, calculator.incomeTax(500, 8, 120, 22.5), "500 reais * 8% a.a * 120 dias should equal 2.96");
 	}
 
 	@Test
