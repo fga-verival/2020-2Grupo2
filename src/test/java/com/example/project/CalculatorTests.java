@@ -24,17 +24,21 @@ class CalculatorTests {
 	void calculateGrossIncome() {
 		Calculator calculator = new Calculator();
 
-		assertEquals(
-			13.33,
-			calculator.grossIncome(500, 8, 120), 0.01,
-			"500 reais * 8% per year * 120 days should be equal to 13.33"
-		);
+		assertEquals(13.33, calculator.grossIncome(500, 8, 120), 0.01, "500 reais * 8% a.a * 120 dias should equal 13,15");
+		assertEquals(437.5, calculator.grossIncome(2500, 9, 700), 0.01, "2500 reais * 9% a.a * 700 dias should equal 431.51");
+	}
 
-		assertEquals(
-			437.5,
-			calculator.grossIncome(2500, 9, 700), 0.01,
-			"2500 BRL * 9% per year * 700 days should be equal to 437.5"
-		);
+	@ParameterizedTest(name = "{1} * {1} * {1} = {1}")
+	@CsvSource({
+			"1000,    8.5,   60, 14.16",
+			"3000,    9.0,   240, 180.0",
+			"2000,  8.5, 270, 127.50",
+			"4200,  9.5, 900, 997.5"
+	})
+	void calculateGrossIncome(double PV, double i, double n, double expectedResult) {
+		Calculator calculator = new Calculator();
+		assertEquals(expectedResult, calculator.grossIncome(PV, i, n), 0.01,
+				() -> PV + " * " + i + " * " + n + " shoud be equal to " + expectedResult);
 	}
 
 	@Test
