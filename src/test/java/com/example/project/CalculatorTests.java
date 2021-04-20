@@ -26,6 +26,7 @@ class CalculatorTests {
 		Calculator calculator = new Calculator();
 		
 		assertEquals(13.15, calculator.grossIncome(500, 8, 120), "500 reais * 8% a.a * 120 dias should equal 13,15");
+		assertEquals(431.51, calculator.grossIncome(2500, 9, 700), "2500 reais * 9% a.a * 700 dias should equal 431.51");
 	}
 
 	@Test
