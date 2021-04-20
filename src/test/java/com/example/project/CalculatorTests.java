@@ -18,15 +18,15 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 class CalculatorTests {
-	// FV = PV * i * n
-
 	@Test
-	@DisplayName("FV = PV * i * n")
+	@DisplayName("J = PV * i * n")
 	void calculateGrossIncome() {
 		Calculator calculator = new Calculator();
-		
-		assertEquals(13.15, calculator.grossIncome(500, 8, 120), "500 reais * 8% a.a * 120 dias should equal 13,15");
-		assertEquals(431.51, calculator.grossIncome(2500, 9, 700), "2500 reais * 9% a.a * 700 dias should equal 431.51");
+
+		assertEquals(13.33, calculator.grossIncome(500, 8, 120), 0.01, "500 reais * 8% a.a * 120 dias should equal 13,15");
+		assertEquals(437.5, calculator.grossIncome(2500, 9, 700), 0.01, "2500 reais * 9% a.a * 700 dias should equal 431.51");
+	}
+
 	@Test
 	@DisplayName("(PV * i * n * 22.5)/100")
 	void testCalculationIncomeTax(){
@@ -58,7 +58,7 @@ class CalculatorTests {
 	void testCalculationIncomeTax3(float P, float i, float n, float ir, double expectedResult) {
 	Calculator calculator = new Calculator();
 	assertEquals(expectedResult, calculator.incomeTax(P, i, n, ir), 0.1f);
-}
+}	
 
 	@Test
 	@DisplayName("1 + 1 = 2")
