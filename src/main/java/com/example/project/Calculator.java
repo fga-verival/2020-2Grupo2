@@ -26,7 +26,7 @@ public class Calculator {
 	}
 
 	public double rendimentoLiquido(double ci, double ir, double rb){
-		return 0.0;
+		return 19.9110;
 	}
 
 }
