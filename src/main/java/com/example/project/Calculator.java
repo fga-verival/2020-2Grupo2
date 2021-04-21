@@ -21,7 +21,8 @@ public class Calculator {
 	}
 
 	public double incomeTax(float P, float i, float n, float ir){
-		return 2.96; // falsificação
+		double result = P * (n / 365) * (i/100);
+		return (result * ir)/100;
 	}
 
 }

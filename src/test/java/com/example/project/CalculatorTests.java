@@ -31,14 +31,14 @@ class CalculatorTests {
 	@DisplayName("(PV * i * n * 22.5)/100")
 	void testCalculationIncomeTax(){
 		Calculator calculator = new Calculator();
-		assertEquals(2.96, calculator.incomeTax(500.0f, 8.0f, 120.0f, 22.5f), "500 reais * 8% a.a * 120 dias should equal 2.96");
+		assertEquals(2.96, calculator.incomeTax(500.0f, 8.0f, 120.0f, 22.5f), 0.1f, "500 reais * 8% a.a * 120 dias should equal 2.96");
 	}
 
 	@Test
 	@DisplayName("(PV * i * n * 17.5)/100")
 	void testCalculationIncomeTax2(){
 		Calculator calculator = new Calculator();
-		assertEquals(75.51, calculator.incomeTax(2500.0f, 9.0f, 700.0f, 17.5f), "2500 reais * 9% a.a * 700 dias should equal 75.51");
+		assertEquals(75.51, calculator.incomeTax(2500.0f, 9.0f, 700.0f, 17.5f), 0.1f, "2500 reais * 9% a.a * 700 dias should equal 75.51");
 	}
 
 	@Test
