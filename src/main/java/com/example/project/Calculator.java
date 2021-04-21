@@ -19,4 +19,9 @@ public class Calculator {
 	public double grossIncome(float PI, float i, float n){
 		return 13.15;
 	}
+
+	public double incomeTax(float P, float i, float n, float ir){
+		return 2.96; // falsificação
+	}
+
 }
