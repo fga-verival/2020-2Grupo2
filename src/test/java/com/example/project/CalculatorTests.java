@@ -26,6 +26,13 @@ class CalculatorTests {
 	}
 
 	@Test
+	@DisplayName("(PV * i * n * 17.5)/100")
+	void testCalculationIncomeTax2(){
+		Calculator calculator = new Calculator();
+		assertEquals(75.51, calculator.incomeTax(2500.0f, 9.0f, 700.0f, 17.5f), "2500 reais * 9% a.a * 700 dias should equal 75.51");
+	}
+
+	@Test
 	@DisplayName("1 + 1 = 2")
 	void addsTwoNumbers() {
 		Calculator calculator = new Calculator();
