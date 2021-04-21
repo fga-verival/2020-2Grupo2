@@ -41,6 +41,25 @@ class CalculatorTests {
 		assertEquals(75.51, calculator.incomeTax(2500.0f, 9.0f, 700.0f, 17.5f), 0.1f, "2500 reais * 9% a.a * 700 dias should equal 75.51");
 	}
 
+	@ParameterizedTest(name = "Aplicacao Inicial: R$ {0}\nTaxa de juros: R$ {1}\nDias: {2}\nAliquota: {3}\nImpost de Renda: {4}\n")
+	@CsvSource({
+			"1000.00f,    8.5f,     60.0f,     	 	22.5, 	3.14",
+			"500.00f,   	8.0f,    	120.0f,     	22.5,		2.96",
+			"3000.00f,   	9.0f,    	240.0f,     	20.0,		35.51",
+			"2000.00f,   	8.5f,    	270.0f,     	20.0,		25.15",
+			"100.00f,     7.5f,     390.0f,     	17.5,		1.40",
+			"250.00f,     8.0f,    	420.0f,     	17.5,		4.03",
+			"400.00f,    	8.0f,    	550.0f,    		17.5,		8.44",
+			"800.00f,   	8.0f,    	670.0f,    		17.5,		20.56",
+			"2500.00f,   	9.0f,    	700.0f,    		17.5,		75.51",
+			"4200.00f,   	9.5f,    	900.0f,    		15.0,		147.58",
+			"100.00f,    	7.5f,     1000.0f,    	15.0,		3.08",
+	})
+	void testCalculationIncomeTax3(float P, float i, float n, float ir, double expectedResult) {
+	Calculator calculator = new Calculator();
+	assertEquals(expectedResult, calculator.incomeTax(P, i, n, ir), 0.1f);
+}
+
 	@Test
 	@DisplayName("1 + 1 = 2")
 	void addsTwoNumbers() {
