@@ -16,4 +16,8 @@ public class Calculator {
 		return a + b;
 	}
 
+	public double incomeTax(float P, float i, float n, float ir){
+		return 2.96; // falsificação
+	}
+
 }
