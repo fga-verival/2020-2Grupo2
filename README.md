@@ -12,21 +12,15 @@ Para executar a suíte de testes rode
 
 #### Falsificação
 
-<p style="text-indent: 20px; text-align: justify"> 
-Retorna uma constante para que a barra verde surja.
-</p>
+&emsp;Retorna uma constante para que a barra verde surja.
 
 #### Triangulação
 
-<p style="text-indent: 20px; text-align: justify"> 
-A partir de valores já obtidos você "triangula" descobre o comportamento (código) que deveria gerar esses valores dada essas entradas.
-</p>
+&emsp;A partir de valores já obtidos você "triangula" descobre o comportamento (código) que deveria gerar esses valores dada essas entradas.
 
 ### Como triangularizar com parâmetros em frameworks de testes de unitários?
 
-<p style="text-indent: 20px; text-align: justify">
-Não sabemos, pois não entendemos com a consulta na literatura, fizemos os testes utilizando uma função que recebe os parâmetros de através de CSV.
-</p>
+&emsp;Não sabemos, pois não entendemos com a consulta na literatura, fizemos os testes utilizando uma função que recebe os parâmetros de através de CSV.
 
 ### Análise crítica sobre o uso das técnicas usadas
 
