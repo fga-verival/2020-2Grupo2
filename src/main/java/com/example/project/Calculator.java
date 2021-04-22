@@ -21,4 +21,17 @@ public class Calculator {
 		return (result * ir)/100;
 	}
 
+	public double grossIncome(double PV, double i, double n) {
+		double taxaAm = (i / 100.0) / 12.0;
+		double prazoMes = n / 30.0;
+		double value = PV * taxaAm * prazoMes;
+
+		System.out.println("Calculated: " + value);
+		return value;
+	}
+
+	public double rendimentoLiquido(double ci, double ir, double rb){
+		return ((ci+rb-ir)/ci)*100 - 100;
+	}
 }
+
