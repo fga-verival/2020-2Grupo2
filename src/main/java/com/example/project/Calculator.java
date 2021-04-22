@@ -24,5 +24,9 @@ public class Calculator {
 		System.out.println("Calculated: " + value);
 		return value;
 	}
+
+	public double rendimentoLiquido(double ci, double ir, double rb){
+		return ((ci+rb-ir)/ci)*100 - 100;
+	}
 }
 
