@@ -33,7 +33,7 @@ Para executar a suíte de testes rode
 
 #### Dificuldades
 
-- Na nossa visão, a técnica de triangulação não se aplica bem no contexto, pois as fórmulas no gera (rendimento bruto, rendimento líquido e cálculo do valor do imposto de renda) são bem conhecidas e definidas matematicamente.
+- Na nossa visão, a técnica de triangulação não se aplica bem no contexto, pois as fórmulas no geral (rendimento bruto, rendimento líquido e cálculo do valor do imposto de renda) são bem conhecidas e definidas matematicamente.
 - Não conseguimos entender a diferença do commit 4 para o commit 5, provavelmente por não termos entendido bem como funciona a triangulação neste caso.
 
 ### Referências
